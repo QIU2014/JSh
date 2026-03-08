@@ -75,7 +75,7 @@ public class ShellRunner {
 
     public void run() {
         System.out.println("JSH [v" + main.version + "]");
-        System.out.println("(c) qiu2014. All rights reserved.");
+        System.out.println("(c) qiu2014. Licensed under GNU GENERAL PUBLIC LICENSE");
         System.out.println("Type 'help' for available commands");
         System.out.println("Press Ctrl+C to interrupt command, Ctrl+D to exit");
 
