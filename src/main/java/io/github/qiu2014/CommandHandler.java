@@ -1,5 +1,7 @@
 package io.github.qiu2014;
 
+import io.github.qiu2014.extension.ExtensionCommandHandler;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
@@ -64,10 +66,11 @@ public class CommandHandler {
                 printEnvironment();
             } else if(command.equalsIgnoreCase("help") || command.equals("?")) {
                 printHelp();
+                main.getExtensionCommandHandler().printExtendedHelp();
             } else if(command.equals("ls") || command.startsWith("ls ")) {
                 listDirectory(command);
             } else {
-                System.out.println("jsh: command not found: " + command);
+                main.getExtensionCommandHandler().processCommand(command);
             }
 
             System.out.flush();
